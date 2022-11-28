@@ -7,11 +7,8 @@ form {
     top: 220px;
     margin-top: 30px;
     margin-bottom: 30px;
-    display: block;
-    
+    display: block;    
 }
-
-
 
 .input {
     border: none;
@@ -21,12 +18,12 @@ form {
     width: 100%;
 }
 
-.input::placeholder {
+.input::placeholder {       /*set the default value in the input box*/
     color: lightgray;
 }
 
 .toDoList {
-    background-color: steelblue;
+    background-color: steelblue;    /*set the style of added to-do item*/
     padding: 0px;
     margin: 0%;
     list-style-type: none;
@@ -40,7 +37,7 @@ form {
     position: relative;
 }
 
-.toDoList li.completed {
+.toDoList li.completed {        /*set the style of completed to-do item*/
     color: lightgray;
     text-decoration: line-through;
     font-style: italic;

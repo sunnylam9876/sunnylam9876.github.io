@@ -3,14 +3,14 @@ function runValidate(form) {
     //var totalExpense = 0;
     //var balance = 0;
 
-    if (validateDescription(form) && validateAmount(form)){
+    if (validateDescription(form) && validateAmount(form)){     //perform data validation
         let in_or_ex = form.elements["in_or_ex"];
         let description = form.elements["description"];
         let amount = form.elements["amount"];
         let income_list = document.getElementById("income_list");
         let expense_list = document.getElementById("expense_list");
         
-        let incomeAmount = document.getElementById("incomeAmount");
+        let incomeAmount = document.getElementById("incomeAmount");     
         let totalIncome = parseFloat(incomeAmount.innerText);
         
         let expenseAmount = document.getElementById("expenseAmount");
@@ -40,7 +40,7 @@ function runValidate(form) {
     
 }
 
-function validateDescription(form) {
+function validateDescription(form) {    //check any input in description box
     let description = form.elements["description"];
 
     if (description.validity.valueMissing) {
@@ -52,7 +52,7 @@ function validateDescription(form) {
     }
 }
 
-function validateAmount(form) {
+function validateAmount(form) {     //check any input in amount box
     let amount = form.elements["amount"];
 
     if (amount.validity.valueMissing) {
@@ -65,7 +65,7 @@ function validateAmount(form) {
     }
 }
 
-function clearAllData() {
+function clearAllData() {       //clear all the data: balance, income, expense amount
 
     if (confirm("All the data will be cleared!\nAre you sure?")) {
         let income_list = document.getElementById("income_list");
@@ -82,3 +82,12 @@ function clearAllData() {
     }    
 }
 
+function showInstruction(){     //display instrurtion text
+    instruction_container = document.getElementById("instruction_container");
+    instruction_container.classList.add("show");
+}
+
+function closeInstruction() {   //hide instruction text
+    instruction_container = document.getElementById("instruction_container");
+    instruction_container.classList.remove("show");
+}

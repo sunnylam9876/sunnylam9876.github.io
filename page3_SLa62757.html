@@ -24,6 +24,7 @@
         
         <h1 class="heading">Expenditure Calculator</h1>
         <h3 class="sub-heading">Click <strong><em><a href="page4_SLa62757.html" id="playVideo" target="_blank" >here</a></em></strong> to learn more about managing your money</h3>
+        
         <div id="parent_container">
             <div id="input_container">
                 <div id="summary">
@@ -60,14 +61,16 @@
 
                         <input type="button" id="clearAll" value="Clear ALL data" 
                             onclick="clearAllData()">
+                        <br><p ><a id="instruction_text" onClick="showInstruction()">Click here for instruction</a></p>
                     </form>
+                    
                 </div>
             </div>
 
             <div id="income_container">
                 <div id="income_list_heading">Income:</div>
                 <div id="income_list">
-                    
+                    <!--data to be displayed here-->
                 </div>
             </div>
 
@@ -75,11 +78,20 @@
             <div id="expense_container">
                 <div id="expense_list_heading">Expense:</div>
                 <div id="expense_list">
-                    
+                    <!--data to be displayed here-->
                 </div>
             </div>
         </div>
 
+        <div id="instruction_container">
+            <div id="instruction">Instruction: <br>
+            1. Select "Income" / "Expense" in the drop-down menu. <br>
+            2. Input description. <br>
+            3. Input amount. <br>
+            4. Click "Add" Button <br><br>
+            <a id="closeInstruction_text" onclick="closeInstruction()">[Close]</a>
+        </div>
+        </div>
         
     </body>
 </html>
